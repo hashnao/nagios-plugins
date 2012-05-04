@@ -2,7 +2,7 @@
 #
 # Author        : N.Hashimoto 
 # E-mail	: mrhashnao@gmail.com
-# Description   : Verify node joinning cassandra multinode cluster, and
+# Description   : Verify node joining cassandra multinode cluster, and
 #		  send alert if the number of live node is less than the specified number.
 #
 # ------------------------------------------------------------
