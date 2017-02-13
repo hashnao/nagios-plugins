@@ -106,7 +106,7 @@ expr $warning + 1 >/dev/null 2>&1
 if [ "$?" -lt 2 ]; then
   true
 else
-  echo "-c <critical> $critical must be number."
+  echo "-w <warning> $warning must be number."
   exit 3
 fi
 
@@ -118,9 +118,9 @@ else
   exit 3
 fi
 
-# verify warning is less than critical
+# verify warning is bigger or equal than critical
 if [ "$warning " -lt "$critical" ]; then
-  echo "-w <warning> $warning must be less than -c <critical> $critical."
+  echo "-w <warning> $warning must be greater or equal than -c <critical> $critical."
   exit 3
 fi
 
