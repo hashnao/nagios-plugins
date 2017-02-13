@@ -119,7 +119,7 @@ else
 fi
 
 # verify warning is bigger or equal than critical
-if [ "$warning " -lt "$critical" ]; then
+if [ "$warning" -lt "$critical" ]; then
   echo "-w <warning> $warning must be greater or equal than -c <critical> $critical."
   exit 3
 fi
