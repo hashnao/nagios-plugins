@@ -119,7 +119,7 @@ else
 fi
 
 # verify warning is bigger or equal than critical
-if [ "$warning" -lt "$critical" ]; then
+if [[ "$warning" < "$critical" ]]; then
   echo "-w <warning> $warning must be greater or equal than -c <critical> $critical."
   exit 3
 fi
@@ -142,7 +142,7 @@ else
 fi
 
 # verify the number of live node is less than critical, warning
-if [ "$live_node" -le "$critical" ]; then
+if [[ "$live_node"  < "$critical" || "live_node" = "$critical" ]]; then
   retval=2
 else
   if [ "$live_node" -le "$warning" ]; then
